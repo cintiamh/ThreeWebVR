@@ -4,7 +4,11 @@
   "description": "Testing Three.js",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "./node_modules/.bin/webpack-dev-server --port 3000 --devtool eval --progress --colors --hot --content-base dist",
+    "build": "./node_modules/.bin/webpack -p",
+    "test": "node_modules/.bin/karma start karma.config.js",
+    "test:watch": "ynpm run test -- --watch",
+    "lint": "eslint . --ext .js --ext .jsx"
   },
   "repository": {
     "type": "git",
@@ -15,5 +19,36 @@
   "bugs": {
     "url": "https://github.com/cintiamh/ThreeWebVR/issues"
   },
-  "homepage": "https://github.com/cintiamh/ThreeWebVR#readme"
+  "homepage": "https://github.com/cintiamh/ThreeWebVR#readme",
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-istanbul": "^0.12.2",
+    "babel-istanbul-loader": "^0.1.0",
+    "babel-loader": "^6.4.1",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-latest": "^6.24.1",
+    "babel-register": "^6.24.1",
+    "chai": "^3.5.0",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.10.3",
+    "istanbul-instrumenter-loader": "^2.0.0",
+    "karma": "^1.6.0",
+    "karma-chai": "^0.1.0",
+    "karma-coverage-istanbul-reporter": "^1.2.0",
+    "karma-mocha": "^1.3.0",
+    "karma-phantomjs-launcher": "^1.0.4",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-spec-reporter": "0.0.31",
+    "karma-tap-reporter": "0.0.6",
+    "karma-webpack": "^2.0.3",
+    "mocha": "^3.2.0",
+    "sinon": "^2.1.0",
+    "webpack": "^2.4.1",
+    "webpack-dev-server": "^2.4.2",
+    "yargs": "^7.1.0"
+  }
 }

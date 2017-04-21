@@ -1,0 +1,10 @@
+{
+  "extends": "airbnb",
+  "env": {
+    "browser": true
+  },
+  "rules": {
+    "indent": [2, 4],
+    "max-len": [2, 100, 4, {"ignoreComments": true}]
+  }
+}
