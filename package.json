@@ -50,5 +50,9 @@
     "webpack": "^2.4.1",
     "webpack-dev-server": "^2.4.2",
     "yargs": "^7.1.0"
+  },
+  "dependencies": {
+    "three": "^0.85.0",
+    "three-stereo-effect": "^1.0.14"
   }
 }

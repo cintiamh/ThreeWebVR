@@ -4,11 +4,12 @@ var plugins = [];
 
 var config = {
     entry: {
-        index: './src/index.js'
+        index: './src/index.js',
+        vendor: ['three', 'three-stereo-effect']
     },
     output: {
-        filename: [name].min.js,
-        path: path.resolve(__dirname, './dist')
+        filename: '[name].min.js',
+        path: path.resolve(__dirname, './dist'),
         publicPath: '/'
     },
     devServer: {
